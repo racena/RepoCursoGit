@@ -30,7 +30,7 @@ pipeline
                 {
 					//Escribe a fichero
 					nombreFichero="C:\\Fichero_Salida.txt"
-                    writeFile(file:nombreFichero , text:"La edad es"+edad)
+                    writeFile(file:nombreFichero , text:"La edad es "+edad)
                     println("El fichero fue escrito. Vamos a leerlo:")
 					
 					//Lee el fichero
