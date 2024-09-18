@@ -1,21 +1,52 @@
-pipeline {
-    agent any
+def fechaNacimiento = new Date('08/21/1982')
+def fechaHoy = new Date()
+def edad = 0
 
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
+pipeline
+{
+    agent any
+	
+    stages
+    {
+ 
+		stage("CalcularEdad")
+        {
+            steps
+            {
+                script
+                {
+					edad = fechaHoy.getYear() - fechaNacimiento.getYear()
+                    println("La edad es:"+edad)
+					
+					//Escribe a fichero
+					nombreFichero="C:\\edad.txt"
+                    writeFile(file:nombreFichero, edad)
+                    println("El fichero fue escrito. Vamos a leerlo:")
+					
+					//Lee el fichero
+					txt = readFile(file:nombreFichero)
+                    println (txt)
+				}
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+		
+        stage("GenerarTxt")
+        {
+            steps
+            {
+                script
+                {
+					//Escribe a fichero
+					nombreFichero="C:\\edad.txt"
+                    writeFile(file:nombreFichero, edad)
+                    println("El fichero fue escrito. Vamos a leerlo:")
+					
+					//Lee el fichero
+					txt = readFile(file:nombreFichero)
+                    println (txt)
+                }
             }
         }
     }
-}  
+
+}
