@@ -1,12 +1,10 @@
+def fechaNacimiento
+def fechaHoy
+def edad
+
 pipeline
 {
     agent any
-
-
-	fechaNacimiento = new Date('08/21/1982')
-	fechaHoy = new Date()
-	edad = 0
-
 	
     stages
     {
@@ -17,6 +15,8 @@ pipeline
             {
                 script
                 {
+					fechaNacimiento = new Date('08/21/1982')
+					fechaHoy = new Date()
 					edad = fechaHoy.getYear() - fechaNacimiento.getYear()
                     println("La edad es:"+edad)
 					
