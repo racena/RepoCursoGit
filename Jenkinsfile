@@ -19,8 +19,8 @@ pipeline
                     println("La edad es:"+edad)
 					
 					//Escribe a fichero
-					nombreFichero="C:\\edad.txt"
-                    writeFile(file:nombreFichero, edad)
+					nombreFichero="C:\\Fichero_Salida.txt"
+                    writeFile(file:nombreFichero , text:edad)
                     println("El fichero fue escrito. Vamos a leerlo:")
 					
 					//Lee el fichero
