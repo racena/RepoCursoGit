@@ -18,14 +18,6 @@ pipeline
 					edad = fechaHoy - fechaNacimiento
                     println("La edad es:"+edad)
 					
-					//Escribe a fichero
-					nombreFichero="C:\\Fichero_Salida.txt"
-                    writeFile(file:nombreFichero , text:edad)
-                    println("El fichero fue escrito. Vamos a leerlo:")
-					
-					//Lee el fichero
-					txt = readFile(file:nombreFichero)
-                    println (txt)
 				}
             }
         }
@@ -37,8 +29,8 @@ pipeline
                 script
                 {
 					//Escribe a fichero
-					nombreFichero="C:\\edad.txt"
-                    writeFile(file:nombreFichero, edad)
+					nombreFichero="C:\\Fichero_Salida.txt"
+                    writeFile(file:nombreFichero , text:"La edad es"+edad)
                     println("El fichero fue escrito. Vamos a leerlo:")
 					
 					//Lee el fichero
