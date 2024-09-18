@@ -1,10 +1,12 @@
-def fechaNacimiento = new Date('08/21/1982')
-def fechaHoy = new Date()
-def edad = 0
-
 pipeline
 {
     agent any
+
+
+	def fechaNacimiento = new Date('08/21/1982')
+	def fechaHoy = new Date()
+	def edad = 0
+
 	
     stages
     {
