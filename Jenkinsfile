@@ -1,5 +1,5 @@
-def fechaNacimiento
-def fechaHoy
+def fechaNacimiento = 1982
+def fechaHoy = 2024
 def edad
 
 pipeline
@@ -15,9 +15,7 @@ pipeline
             {
                 script
                 {
-					fechaNacimiento = new Date('08/21/1982')
-					fechaHoy = new Date()
-					edad = fechaHoy.getYear() - fechaNacimiento.getYear()
+					edad = fechaHoy - fechaNacimiento
                     println("La edad es:"+edad)
 					
 					//Escribe a fichero
