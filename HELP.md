@@ -6,11 +6,13 @@ For further reference, please consider the following sections:
 * [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
 * [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/3.3.3/maven-plugin)
 * [Create an OCI image](https://docs.spring.io/spring-boot/3.3.3/maven-plugin/build-image.html)
+* [Thymeleaf](https://docs.spring.io/spring-boot/docs/3.3.3/reference/htmlsingle/index.html#web.servlet.spring-mvc.template-engines)
+* [MongoDB Atlas Vector Database](https://docs.spring.io/spring-ai/reference/api/vectordbs/mongodb.html)
 
 ### Guides
 The following guides illustrate how to use some features concretely:
 
-* [Accessing data with MySQL](https://spring.io/guides/gs/accessing-data-mysql/)
+* [Handling Form Submission](https://spring.io/guides/gs/handling-form-submission/)
 
 ### Maven Parent overrides
 
